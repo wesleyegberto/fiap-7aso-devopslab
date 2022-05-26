@@ -24,7 +24,7 @@ jobs:
 
       - name: Unit Test
         run: |-
-          coverage run --source=app -m pytest test.py
+          python3 -m pytest -v test.py
           coverage report -m
           coverage xml -i
 
