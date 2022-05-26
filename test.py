@@ -21,4 +21,4 @@ class Test(unittest.TestCase):
     def test_pagina_error(self):
         error_response = self.app.get('/bug')
 
-        self.assertEquals(error_response.status, '500 INTERNAL SERVER ERROR')
+        self.assertEqual(error_response.status, '500 INTERNAL SERVER ERROR')
