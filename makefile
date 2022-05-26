@@ -7,9 +7,9 @@ tests:
 	python3 -m pytest -v test.py
 
 coverage:
+	python3 -m pytest -v test.py --cov=./ --cov-report=term --cov-report=html
 	# coverage run --source=app -m pytest test.py
-	python3 -m pytest -v test.py
-	coverage report -m
-	coverage xml -i
+	# coverage report -m
+	# coverage xml -i
 
 

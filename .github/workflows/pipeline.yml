@@ -24,9 +24,7 @@ jobs:
 
       - name: Unit Test
         run: |-
-          python3 -m pytest -v test.py
-          coverage report -m
-          coverage xml -i
+          python3 -m pytest -v test.py --cov=./ --cov-report=term --cov-report=xml
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
