@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_wtf.csrf import CSRFProtect
+import os
 
 app = Flask(__name__)
 
@@ -14,7 +15,8 @@ def bad():
     try:
         raise TypeError()
     except TypeError as e:
-        print(e)  
+        print(e)
 
 if __name__ == '__main__':
-    app.run()
+    port = os.getenv('PORT')
+    app.run('0.0.0.0', port=port)

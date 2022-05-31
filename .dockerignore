@@ -1,0 +1,8 @@
+Dockerfile
+.git
+.github
+.gitignore
+Procfile
+makefile
+sonar-project.properties
+LICENSE
