@@ -1,3 +1,6 @@
+install:
+	pip3 install -r requirements.txt
+
 run:
 	python3 app.py
 
@@ -12,4 +15,9 @@ coverage:
 	# coverage report -m
 	# coverage xml -i
 
+docker-build:
+	docker build -t fiap-app:v1.0 .
+
+docker-run:
+	docker run --name fiap-app -p 8080:80 -e PORT=80 -it fiap-app:v1.0
 
