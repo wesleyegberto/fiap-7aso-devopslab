@@ -72,7 +72,7 @@ jobs:
         run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
 
   DeployProd:
-    needs: DeployHom
+    needs: DeployHmg
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
