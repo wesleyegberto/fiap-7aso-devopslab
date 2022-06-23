@@ -1,0 +1,7 @@
+runtime: python38
+# Flex habilita a imagem customizada que estamos buildando
+env: flex
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
